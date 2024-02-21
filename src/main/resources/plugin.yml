@@ -1,7 +1,7 @@
 name: PlaceholderAPI
 main: "me.clip.placeholderapi.PlaceholderAPIPlugin"
 
-version: ${version}
+version: 2.11.6
 author: HelpChat
 
 api-version: "1.13"

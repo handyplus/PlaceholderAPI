@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "me.clip"
-version = "2.11.6-DEV-${System.getProperty("BUILD_NUMBER")}"
+version = "2.11.6"
 
 description = "An awesome placeholder provider!"
 
@@ -89,7 +89,7 @@ tasks {
 
         relocate("net.kyori", "me.clip.placeholderapi.libs.kyori")
 
-        relocate("cn.handyplus.lib.FoliaLib", "me.clip.placeholderapi.libs.FoliaLib")
+        relocate("cn.handyplus.lib.adapter", "me.clip.placeholderapi.libs.FoliaLib")
     }
 
     test {
