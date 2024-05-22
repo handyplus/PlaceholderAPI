@@ -23,7 +23,8 @@ repositories {
 }
 
 dependencies {
-    implementation("net.kyori:adventure-platform-bukkit:4.3.1")
+    implementation("org.bstats:bstats-bukkit:3.0.1")
+    implementation("net.kyori:adventure-platform-bukkit:4.3.2")
 
     compileOnly("org.spigotmc:spigot-api:1.20-R0.1-SNAPSHOT")
     compileOnlyApi("org.jetbrains:annotations:23.0.0")
@@ -55,7 +56,7 @@ license {
     encoding = "UTF-8"
 
     ext {
-        set("year", 2021)
+        set("year", 2024)
     }
 }
 
@@ -87,7 +88,10 @@ tasks {
     withType<ShadowJar> {
         archiveClassifier.set("")
 
+        relocate("org.bstats", "me.clip.placeholderapi.metrics")
         relocate("net.kyori", "me.clip.placeholderapi.libs.kyori")
+
+        exclude("META-INF/versions/**")
 
         relocate("cn.handyplus.lib.adapter", "me.clip.placeholderapi.libs.FoliaLib")
     }
